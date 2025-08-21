@@ -1,0 +1,19 @@
+// Read in an integer N. Then print the sum of the squares of the first N natural numbers
+
+#include <stdio.h>
+#include <math.h>  
+
+int main() {
+    int sum=0,n,number;
+    
+    printf("Input N: ");
+    scanf("%d",&n);
+    
+    for (number=1;number<=n;++number){
+        sum += pow(number,2);
+
+    }
+    
+    printf("Sum: %d",sum);
+    return 0;
+}

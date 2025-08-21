@@ -1,0 +1,27 @@
+//   Read in an integer N. Then read in N numbers and print the number of integers between 0 and 10 (including both), between 11 and 20, and > 20. (do not use arrays even if you know it)
+
+#include <stdio.h>
+#include <math.h>  
+
+int main() {
+    int n,i,number,r1,r2,r3;
+    r1=r2=r3=0;
+    
+    printf("Input N: ");
+    scanf("%d",&n);
+    
+    //Handling the case with all equal inputs and hence second highest number = highest number = the same input
+    for (i=1;i<=n;++i){
+        printf("Input number: ");
+        scanf("%d",&number);
+        
+        if(number >=0){ ;
+        if(number<=10) ++r1;
+        else if(number<=20) ++r2;
+        else if(number>=20) ++r3;
+        }
+    }
+    
+    printf("There are %d number between 0 and 10. There are %d numbers between 11 and 20. There are %d numbers greater than 20",r1,r2,r3);
+    return 0;
+}

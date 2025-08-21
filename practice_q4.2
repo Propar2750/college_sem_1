@@ -1,0 +1,31 @@
+//  Read in an integer N. Then read in N numbers and print their maximum and second maximum (do not use arrays even if you know it)
+
+#include <stdio.h>
+#include <math.h>  
+
+int main() {
+    int n,max_number=0,i,number,s_max_number=0;
+    
+    printf("Input N: ");
+    scanf("%d",&n);
+    
+    //Handling the case with all equal inputs and hence second highest number = highest number = the same input
+    printf("Input number: ");
+    scanf("%d",&number);
+    s_max_number=max_number=number;    
+    for (i=2;i<=n;++i){
+        printf("Input number: ");
+        scanf("%d",&number);
+
+        if (number > max_number) {
+            s_max_number=max_number;
+            max_number=number;
+        }
+        
+        if (number>s_max_number && number!=max_number) s_max_number=number;
+
+    }
+    
+    printf("Max number: %d,Second highest number: %d",max_number, s_max_number);
+    return 0;
+}
